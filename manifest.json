@@ -5,7 +5,7 @@
   "description": "Finds and extracts contact emails from web pages.",
   "permissions": ["activeTab", "scripting", "clipboardWrite", "clipboardRead"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "js/background.js"
   },
   "action": {
     "default_popup": "popup.html"
@@ -17,7 +17,7 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["content.js"]
+      "js": ["js/content.js"]
     }
   ]
 }
