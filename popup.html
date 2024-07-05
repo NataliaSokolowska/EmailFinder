@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Email Finder</title>
+    <link rel="stylesheet" type="text/css" href="./css/tailwind.css" />
+    <style>
+      html {
+        font-family: "DM Sans", sans-serif;
+      }
+
+      :root {
+        --bg-color: #ffffff;
+        --text-color: #000000;
+        --button-bg: #1f2937;
+        --button-text: #ffffff;
+        --email-bg: #f3f4f6;
+        --email-text: #1f2937;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg-color: #1f2937;
+          --text-color: #f3f4f6;
+          --button-bg: #f3f4f6;
+          --button-text: #1f2937;
+          --email-bg: #374151;
+          --email-text: #f3f4f6;
+        }
+      }
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        width: 250px;
+      }
+
+      button {
+        background-color: var(--button-bg);
+        color: var(--button-text);
+      }
+
+      #emails {
+        background-color: var(--email-bg);
+        color: var(--email-text);
+        margin-top: 12px;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="flex flex-col items-center justify-center space-y-4">
+      <h1 class="text-3xl font-bold underline">Find Emails</h1>
+      <button
+        id="find-emails"
+        class="hover:opacity-90 text-white font-bold py-2 px-4 rounded transition duration-200"
+      >
+        Click to find emails
+      </button>
+      <div id="emails" class="w-full p-4 rounded shadow-md">
+        <!-- Emails will be displayed here -->
+      </div>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
